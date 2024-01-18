@@ -1,0 +1,30 @@
+<!-- SPDX-License-Identifier: MIT -->
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta name="author" content="Mike Wille <mike@wille.io>">
+    <script src="webtr-tools.js" defer></script>
+    <title>webtr Tools</title>
+  </head>
+  <body>
+    <h1>webtr Tools</h1>
+    <hr>
+    <h2>Check `tr` usage in js file</h2>
+    <p>Upload a js file to get all used translatable texts:</p>
+    <p><input type="file" id="js" accept="text/javascript"></p>
+    <div id ="content"> - </div>
+    <hr>
+    <h2>Check for missing translations in tr.js file</h2>
+    <p>Upload a tr.js file to check what translations are missing for the corresponding, uploaded js file:</p>
+    <p><input type="file" id="tr" accept="text/javascript"></p>
+    <div id ="missing"> - </div>
+
+    <script>
+      window.addEventListener("error", (error) =>
+      {
+        console.error(error);
+        alert("Error: " + error.message);
+      });
+    </script>
+  </body>
+</html>
